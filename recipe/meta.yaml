@@ -1,12 +1,12 @@
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: lsstdesc-wl-shear-sims
   version: {{ version }}
 
 source:
-  url: https://github.com/LSSTDESC/descwl-shear-sims/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 4ee94305c3adc8696f797dc1fed8057e456166cb26f279ab40d04886a4de0e13
+  url: https://github.com/LSSTDESC/descwl-shear-sims/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: fd9c4562ca6d3418a13192b4131b16f8ed63cefb7d865f5ee20179e87def7e3c
 
 build:
   number: 0
