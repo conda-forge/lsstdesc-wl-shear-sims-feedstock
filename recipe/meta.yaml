@@ -24,6 +24,7 @@ requirements:
     - lsstdesc.weaklensingdeblending
     - pydantic
     - hexalattice
+    - lenstronomy
 
 test:
   imports:
