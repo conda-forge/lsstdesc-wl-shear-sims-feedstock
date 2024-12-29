@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set version = "0.4.4" %}
 
 package:
@@ -9,17 +10,17 @@ source:
   sha256: a66d9b826b6a416880a41d0d9f4b32d0d672ca806bcbb4bd77f1338eff49a68d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=38
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numba
     - lsstdesc.weaklensingdeblending
     - pydantic
@@ -31,6 +32,7 @@ test:
     - descwl_shear_sims
   requires:
     - stackvana
+    - python {{ python_min }}
 
 about:
   home: https://github.com/LSSTDESC/descwl-shear-sims/
