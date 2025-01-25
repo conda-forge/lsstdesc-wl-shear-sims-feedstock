@@ -1,5 +1,5 @@
-{% set python_min = '3.10' %}
-{% set version = "0.4.4" %}
+{% set python_min = "3.10" %}
+{% set version = "0.4.5" %}
 
 package:
   name: lsstdesc-wl-shear-sims
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/LSSTDESC/descwl-shear-sims/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a66d9b826b6a416880a41d0d9f4b32d0d672ca806bcbb4bd77f1338eff49a68d
+  sha256: 91235ffd4d39455c231f5abb645872860182209021a421f53d53b88fb2548b1f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
